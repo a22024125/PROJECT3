@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">算術囉</string>
+    <string name="left_1">1</string>
+    <string name="left_2">2</string>
+    <string name="left_3">3</string>
+    <string name="left_4">4</string>
+    <string name="left_5">5</string>
+    <string name="left_6">6</string>
+    <string name="left_7">7</string>
+    <string name="left_8">8</string>
+    <string name="left_9">9</string>
+    <string name="right_1">1</string>
+    <string name="right_2">2</string>
+    <string name="right_3">3</string>
+    <string name="right_4">4</string>
+    <string name="right_5">5</string>
+    <string name="right_6">6</string>
+    <string name="right_7">7</string>
+    <string name="right_8">8</string>
+    <string name="right_9">9</string>
+    <string name="result">結果</string>
+
+</resources>
