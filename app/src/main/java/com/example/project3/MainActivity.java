@@ -15,6 +15,22 @@ public class MainActivity extends AppCompatActivity {
     int  r = 6, l = 6;
     String Str = "";
     String Final = "";
+    private void updateResult() {
+        for (int f = 1;f <= r; f++) {
+            for (int m = 1; m < l+1; m++) {
+                Str = "";
+                Str += f;
+                Str += " * ";
+                Str += m;
+                Str += " = ";
+                Str += f * m;
+                Str += '\n';
+                Final += Str;
+            }
+        }
+        mtextView.setText(String.valueOf(Final));
+        Final = "";
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,48 +98,29 @@ public class MainActivity extends AppCompatActivity {
                     l = 9;
                     break;
             }
-            for (int f = 1; f <= r; f++) {
-                for (int m = 1; m < l+1; m++) {
-                    Str = "";
-                    Str += f;
-                    Str += " * ";
-                    Str += m;
-                    Str += " = ";
-                    Str += f * m;
-                    Str += '\n';
-                    Final += Str;
-                }
-            }
-            mtextView.setText(String.valueOf(Final));
-            Final = "";
+            updateResult();
+            //for (int f = 1; f <= r; f++) {
+            // for (int m = 1; m < l+1; m++) {
+            //Str = "";
+            //Str += f;
+            // Str += " * ";
+            // Str += m;
+            // Str += " = ";
+            // Str += f * m;
+            //  Str += '\n';
+            // Final += Str;
+            // }
+            // }
+            // mtextView.setText(String.valueOf(Final));
+            //Final = "";
             //mtextView.setText(String.valueOf(fun(l,r)));
-            //for(int f = l; f < l; f++) {
-                //Str = "";
-                //for(int m = r; m < r; m++) {
-                    //Str += Integer.toString(f);
-                    //Str += " x ";
-                    //Str += Integer.toString(m);
-                    //Str += " = ";
-                    //Str += f*m;
-                    //mtextView.setText(String.valueOf(Str));
-
-                //}
 
             //}
-            //Str = "";
-            //Str += Integer.toString(l);
-            //Str += " x ";
-            //Str += Integer.toString(r);
-            //Str += " = ";
-            //Str += l*r;
-            //mtextView.setText(String.valueOf(Str));
         }
-
     };
     private RadioGroup.OnCheckedChangeListener radGrprightOnCheckedChange = new RadioGroup.OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(RadioGroup radioGroup, int i) {
-
             switch (mradGrpright.getCheckedRadioButtonId()) {
                 case R.id.radBtnright1:
                     r = 1;
@@ -154,41 +151,26 @@ public class MainActivity extends AppCompatActivity {
                     break;
 
             }
-            for (int f = 1; f <= r; f++) {
-                for (int m = 1; m <= l; m++) {
-                    Str = "";
-                    Str += f;
-                    Str += " * ";
-                    Str += m;
-                    Str += " = ";
-                    Str += f * m;
-                    Str += '\n';
-                    Final += Str;
-                }
-            }
-            mtextView.setText(String.valueOf(Final));
-            Final = "";
-           // mtextView.setText(String.valueOf(fun(l,r)));
-
+            updateResult();
+            // for (int f = 1; f <= r; f++) {
+            // for (int m = 1; m <= l; m++) {
             //Str = "";
-            //Str += Integer.toString(l);
-            //Str += " x ";
-           // Str += Integer.toString(r);
+            //Str += f;
+            //Str += " * ";
+            //Str += m;
             //Str += " = ";
-            //Str += l*r;
+            //Str += f * m;
+            //Str += '\n';
+            //Final += Str;
+            // }
+            // }
+            //mtextView.setText(String.valueOf(Final));
+            //Final = "";
+            // mtextView.setText(String.valueOf(fun(l,r)));
 
-            //mtextView.setText(String.valueOf(Str));
-            //for(int f = l; f < l; f++) {
-                //for(int m = r; m < r; m++) {
-                    //int E = f * m;
-                    //Str += Integer.toString(f);
-                    //Str += "x";
-                    //Str += Integer.toString(m);
-                    //mtextView.setText(String.valueOf(Str));
-                //}
-            //}
+            // }
+
         }
-
     };
        // public static char fun(int l, int r) {
             //char Final;
